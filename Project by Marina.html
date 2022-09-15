@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiramisu 😍</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      h1 {
+        font-size: 45px;
+        color: #ab46d2;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0;
+        padding: 20px;
+      }
+      h2 {
+        display: block;
+        font-size: 30px;
+        color: #ff6fb5;
+        text-align: center;
+        border: 2px solid #ff6fb5;
+        border-radius: 15px;
+        width: 450px;
+        max-width: 100%;
+        padding: 10px;
+        margin: 0 auto;
+      }
+      img {
+        display: block;
+        object-position: center;
+        max-width: 100%;
+        margin: 30px auto;
+        border: solid;
+        border-radius: 50%;
+        border-color: #55d8c1;
+      }
+      a {
+        font-size: 18px;
+        margin: 0px 10px;
+        color: #ab46d2;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        font-size: 28px;
+        cursor: pointer;
+        color: #fcf69c;
+        background-color: #ab46d2;
+        border: 0px;
+        border-radius: 15px;
+        padding: 10px;
+        transition: all 0.5s ease-in-out;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        margin: 10px auto;
+      }
+      button:hover {
+        color: #ab46d2;
+        background-color: #fcf69c;
+      }
+      .mainContainer {
+        background-image: url(https://img.freepik.com/free-photo/background-valentine-s-day-small-knitted-hearts-white-wooden-background-hearts-three-colors-minimalism-is-love_261761-1550.jpg?w=1380);
+        background-position: sticky;
+        background-size: cover, auto;
+        background-repeat: no-repeat;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 auto;
+        overflow-x: auto;
+        overflow-y: auto;
+      }
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .description {
+        font-size: 20px;
+        background-color: #55d8c1;
+        text-align: justify;
+        padding: 10px;
+        margin: 20px 0px 0px 0px;
+        border-radius: 15px;
+      }
+      .footer {
+        margin: 0;
+        padding: 30px 0px 0px 0px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="container">
+        <h1>delicious sweets</h1>
+        <h2>Yummy <strong>TIRAMISU</strong> dessert😍</h2>
+        <img
+          src="https://static.fajnegotowanie.pl/media/uploads/media_image/original/przepis/875/ciasto-tiramisu.jpg"
+          alt="Tiramisu"
+        />
+        <p class="description">
+          <strong>Tiramisu</strong> is a coffee-flavoured Italian dessert. It is
+          made of ladyfingers (savoiardi) dipped in coffee, layered with a
+          whipped mixture of eggs, sugar, and mascarpone cheese, flavoured with
+          cocoa.
+        </p>
+        <a
+          href="https://en.wikipedia.org/wiki/Tiramisu#:~:text=Tiramisu%20(Italian%3A%20tiramis%C3%B9%20%5B%CB%8Ctirami%CB%88su,mascarpone%20cheese%2C%20flavoured%20with%20cocoa."
+          target="_blank"
+          title="Tiramisu in Wikipedia"
+          >Learn more in Wikipedia</a
+        >
+        <button>Order Tiramisu 😍</button>
+        <p class="footer">
+          This page was built by
+          <a
+            href="https://www.instagram.com/marinabershova/"
+            target="_blank"
+            title="Instagram page"
+            >Marina Bershova</a
+          >
+        </p>
+      </div>
+    </div>
+    <script>
+      function order() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+        if (age < 18) {
+          alert(
+            "Hi, " +
+              name +
+              "! Please, tell your parents, what you want to order our delicious tiramisu😍"
+          );
+        } else {
+          prompt("What is your email address?");
+          let h1 = document.querySelector("h1");
+          h1.innerHTML =
+            "Hi, " +
+            name +
+            "! <br/>Thanks for your order!<br/>Order details have been sent to your email👌";
+        }
+      }
+      let orderButton = document.querySelector("button");
+      orderButton.addEventListener("click", order);
+    </script>
+  </body>
+</html>
